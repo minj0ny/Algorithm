@@ -1,0 +1,15 @@
+class Solution {
+	public int[] solution(long n) {
+		int[] answer = {};
+
+		String[] temp = String.valueOf(n).split("");
+		answer = new int[temp.length];
+		int i = 0;
+		while (n > 0) {
+			answer[i++] += n % 10;
+			n /= 10;
+		}
+
+		return answer;
+	}
+}
