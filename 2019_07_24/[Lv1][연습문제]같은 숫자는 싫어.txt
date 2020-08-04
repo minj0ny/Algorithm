@@ -1,0 +1,18 @@
+class Solution {
+	public int[] solution(int[] arr) {
+		int[] answer = {};
+		List<Integer> unique = new ArrayList<Integer>();
+		int val = -1;
+
+		for (int i = 1; i < arr.length; i++) {
+			if (val != arr[i]) {
+				unique.add(arr[i]);
+			}
+			val = arr[i];
+		}
+
+		answer = unique.stream().mapToInt(i->i.intValue()).toArray(); 
+		
+		return answer;
+	}
+}
